@@ -24,6 +24,8 @@ android {
 dependencies {
     // Specify Kotlin/JVM stdlib dependency.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7")
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3")
 
     testImplementation("junit:junit:4.12")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
@@ -36,15 +38,11 @@ dependencies {
 
 kotlin {
    android("androidLib")
-   
-   val buildForDevice = project.findProperty("device") as? Boolean ?: false
-   val iosTarget = if(buildForDevice) iosArm64("ios") else iosX64("ios")
+
+   val iosTarget = iosArm64("ios")
    iosTarget.binaries {
       framework {
-         // Disable bitcode embedding for the simulator build.
-         if (!buildForDevice) {
-            embedBitcode("disable")
-         }
+         embedBitcode("disable")
       }
    }
 
@@ -52,14 +50,19 @@ kotlin {
       commonMain {
          dependencies {
             implementation( "org.jetbrains.kotlin:kotlin-stdlib-common")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.3.3")
          }
       }
       commonTest {
          dependencies {
             implementation( "org.jetbrains.kotlin:kotlin-test-common")
              implementation("org.jetbrains.kotlin:kotlin-test-annotations-common")
+             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3")
          }
       }
+       sourceSets["iosMain"].dependencies {
+           implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-native:1.3.3")
+       }
     }
 }
 
@@ -72,7 +75,9 @@ tasks.register("copyFramework") {
         val targetDir = project.property("configuration.build.dir")!!
         copy {
             from(srcFile.parent)
+            println("copy from ${srcFile.parent}")
             into(targetDir)
+            println("to $targetDir")
             include( "greeting.framework/**")
             include("greeting.framework.dSYM")
         }

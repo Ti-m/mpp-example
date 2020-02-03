@@ -20,5 +20,7 @@ pluginManagement {
     }
 }
 
+enableFeaturePreview("GRADLE_METADATA")
+
 include(":greeting")
 include(":androidApp")

@@ -1,6 +1,9 @@
 package org.greeting
 
 import android.os.Build
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
+import kotlin.reflect.KClass
 
 actual class Platform actual constructor() {
     actual val platform: String = "Android"
@@ -19,4 +22,9 @@ actual object Factory {
         Product(config["user"]!!)
 
     actual val platform: String = "android"
+}
+
+actual val MainDispatcher = Dispatchers.Main as CoroutineDispatcher
+actual fun log(text: String) {
+    println(text)
 }
