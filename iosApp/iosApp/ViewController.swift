@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let product = Factory().create(config: ["user": "JetBrains"])
         label.text = product.description
+        
+        let someKotlinInterfaceImplementationInSwift = SomeInterfaceImplementationInSwift()
+        let someKotlinClass = SomeKotlinClass(dependencieImplementedInSwift: someKotlinInterfaceImplementationInSwift)
+        someKotlinClass.someFunctionImplementedInKotlin()
     }
 
     override func didReceiveMemoryWarning() {
