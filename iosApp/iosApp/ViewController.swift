@@ -16,6 +16,12 @@ class ViewController: UIViewController {
         let product = Factory().create(config: ["user": "JetBrains"])
         label.text = product.description
         
+        //This works
+        let anotherKotlinInterfaceImplementationInSwift = AnotherInterfaceImplementationInSwift()
+        let anotherKotlinClass = AnotherKotlinClass(dependencieImplementedInSwift: anotherKotlinInterfaceImplementationInSwift)
+        anotherKotlinClass.someFunctionImplementedInKotlin()
+        
+        //This crashes
         let someKotlinInterfaceImplementationInSwift = SomeInterfaceImplementationInSwift()
         let someKotlinClass = SomeKotlinClass(dependencieImplementedInSwift: someKotlinInterfaceImplementationInSwift)
         someKotlinClass.someFunctionImplementedInKotlin()

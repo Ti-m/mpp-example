@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A21CD60923EAC0E900CD8355 /* SomeInterfaceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21CD60823EAC0E900CD8355 /* SomeInterfaceImplementation.swift */; };
+		A21CD60B23EAC45900CD8355 /* AnotherInterfaceImplementationInSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21CD60A23EAC45900CD8355 /* AnotherInterfaceImplementationInSwift.swift */; };
 		F861D7E1207FA40F0085E80D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861D7E0207FA40F0085E80D /* AppDelegate.swift */; };
 		F861D7E3207FA40F0085E80D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861D7E2207FA40F0085E80D /* ViewController.swift */; };
 		F861D7E6207FA40F0085E80D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F861D7E4207FA40F0085E80D /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		A21CD60823EAC0E900CD8355 /* SomeInterfaceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeInterfaceImplementation.swift; sourceTree = "<group>"; };
+		A21CD60A23EAC45900CD8355 /* AnotherInterfaceImplementationInSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherInterfaceImplementationInSwift.swift; sourceTree = "<group>"; };
 		F861D7DD207FA40F0085E80D /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F861D7E0207FA40F0085E80D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F861D7E2207FA40F0085E80D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				F861D7E9207FA4100085E80D /* LaunchScreen.storyboard */,
 				F861D7EC207FA4100085E80D /* Info.plist */,
 				A21CD60823EAC0E900CD8355 /* SomeInterfaceImplementation.swift */,
+				A21CD60A23EAC45900CD8355 /* AnotherInterfaceImplementationInSwift.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				F861D7E3207FA40F0085E80D /* ViewController.swift in Sources */,
 				A21CD60923EAC0E900CD8355 /* SomeInterfaceImplementation.swift in Sources */,
+				A21CD60B23EAC45900CD8355 /* AnotherInterfaceImplementationInSwift.swift in Sources */,
 				F861D7E1207FA40F0085E80D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
